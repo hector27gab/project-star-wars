@@ -1,3 +1,16 @@
-/* 
-    General Styles
-*/
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(https://wallpapercave.com/wp/wp2608227.jpg);
+  min-height: 100vh;
+}
+.detailsC-image {
+  width: 80%;
+}
+.detailsP-image {
+  width: 100%;
+}
+.detailsS-image {
+  width: 100%;
+}
