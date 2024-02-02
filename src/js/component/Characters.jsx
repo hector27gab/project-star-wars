@@ -36,7 +36,7 @@ const Characters = () => {
                   to={`/details/characters/${item.result.uid}`}
                   className="btn btn-outline-primary my-2"
                 >
-                  <i class="fa-solid fa-eye"></i>
+                  <i className="fa-solid fa-eye"></i>
                 </Link>
               </div>
             </div>

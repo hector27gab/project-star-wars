@@ -15,20 +15,23 @@ const DetailsShip = () => {
     <>
       {currentShip && (
         <div className="card w-50 mx-auto bg-black rounded text-light">
-          <div className="row">
-            <div className="col-4">
+          <div>
+            <div className="d-flex justify-content-center">
+              <h3 className="my-4">{currentShip.result.properties.name}</h3>
+            </div>
+            <div className="d-flex justify-content-center">
               <img
                 src={`https://starwars-visualguide.com/assets/img/vehicles/${currentShip.result.uid}.jpg`}
                 className="detailsS-image rounded my-5 mx-2"
               />
             </div>
-            <div className="col-4">
-              <div className="d-flex mx-3 mt-4">
+            <div className="d-flex justify-content-center mt-4">
+              <div className="d-flex mx-3">
                 <i class="fa-solid fa-truck"></i>
                 <p className="fw-bold mx-2">Cargo Capacity:</p>
                 <p>{currentShip.result.properties.cargo_capacity} Kg</p>
               </div>
-              <div className="d-flex mx-3 mt-4">
+              <div className="d-flex mx-3">
                 <i class="fa-solid fa-car"></i>
                 <p className="fw-bold mx-2">Vehicle Class:</p>
                 <p>{currentShip.result.properties.vehicle_class}</p>
@@ -39,8 +42,8 @@ const DetailsShip = () => {
                 <p>{currentShip.result.properties.consumables}</p>
               </div>
             </div>
-            <div className="col-4">
-              <div className="d-flex mx-3 mt-4">
+            <div className="d-flex justify-content-center my-4">
+              <div className="d-flex mx-3">
                 <i class="fa-solid fa-person"></i>
                 <p className="fw-bold mx-2">Crew:</p>
                 <p>{currentShip.result.properties.crew}</p>

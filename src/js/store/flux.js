@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
@@ -75,14 +77,17 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       addFavorite: (element) => {
         const store = getStore();
+        const notify = () => toast.success("A new Favorite was added!");
 
         if (
           store.favorites.find((item) => item.result._id === element.result._id)
         ) {
+          toast.error("Already added");
           return;
         }
         const newFavorite = [...store.favorites, element];
         setStore({ favorites: newFavorite });
+        notify();
       },
       removeFavorite: (element) => {
         const store = getStore();
@@ -91,6 +96,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           (item) => item.result._id !== element.result._id
         );
         setStore({ favorites: deleteFavorite });
+        toast.error("Remove!");
       },
       detailsCharacter: (id) => {
         const store = getStore();
