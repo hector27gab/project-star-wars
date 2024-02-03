@@ -6,13 +6,23 @@ body {
   min-height: 100vh;
 }
 
+/* Cards */
+
+.character-card {
+  width: 40%;
+}
+
+.planets-card {
+  width: 45%;
+}
+
 /* Images_____________ */
 
 .detailsC-image {
   width: 80%;
 }
 .detailsP-image {
-  width: 100%;
+  width: 60%;
 }
 .detailsS-image {
   width: 100%;

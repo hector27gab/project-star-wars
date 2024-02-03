@@ -14,7 +14,7 @@ const DetailsPlanet = () => {
   return (
     <>
       {currentPlanet && (
-        <div className="card w-50 mx-auto bg-black rounded text-light">
+        <div className="card planets-card mx-auto bg-black rounded text-light">
           <div>
             <div className="d-flex justify-content-center">
               <h3 className="my-4">{currentPlanet.result.properties.name}</h3>
@@ -22,43 +22,31 @@ const DetailsPlanet = () => {
             <div className="d-flex justify-content-center">
               <img
                 src={`https://starwars-visualguide.com/assets/img/planets/${currentPlanet.result.uid}.jpg`}
-                className="detailsP-image rounded mt-4 mx-3"
+                className="detailsP-image rounded mx-3"
               />
             </div>
           </div>
           <div className="d-flex justify-content-center mt-4">
-            <div className="d-flex mx-3">
-              <i class="fa-solid fa-ruler-vertical fs-4"></i>
-              <p className="fw-bold mx-2">Diameter:</p>
+            <div className="mx-3">
+              <p className="fw-bold">Diameter:</p>
               <p>{currentPlanet.result.properties.diameter}</p>
             </div>
-            <div className="d-flex mx-3">
-              <i class="fa-solid fa-temperature-half fs-4"></i>
-              <p className="fw-bold mx-2">Climate:</p>
+            <div className="mx-3">
+              <p className="fw-bold">Climate:</p>
               <p>{currentPlanet.result.properties.climate}</p>
             </div>
-            <div className="d-flex mx-3">
-              <i class="fa-solid fa-arrow-up-from-ground-water"></i>
-              <p className="fw-bold mx-2">Surface Water:</p>
-              <p>{currentPlanet.result.properties.surface_water}</p>
+            <div className="mx-3">
+              <p className="fw-bold">Surface Water:</p>
+              <p className="mx-3">
+                {currentPlanet.result.properties.surface_water}
+              </p>
             </div>
-          </div>
-          <div className="d-flex justify-content-center mt-3">
-            <div className="d-flex mx-3">
-              <i class="fa-solid fa-plus fs-4"></i>
-              <p className="fw-bold mx-2">Created:</p>
-              <p>{currentPlanet.result.properties.created}</p>
-            </div>
-            <div className="d-flex mx-3">
-              <i class="fa-solid fa-seedling"></i>
-              <p className="fw-bold mx-2">Terrain:</p>
+            <div className="mx-3">
+              <p className="fw-bold">Terrain:</p>
               <p>{currentPlanet.result.properties.terrain}</p>
             </div>
-          </div>
-          <div className="d-flex justify-content-center mt-2">
-            <div className="d-flex mx-3">
-              <i class="fa-brands fa-grav fs-4"></i>
-              <p className="fw-bold mx-2">Gravity:</p>
+            <div className="mx-3">
+              <p className="fw-bold">Gravity:</p>
               <p>{currentPlanet.result.properties.gravity}</p>
             </div>
           </div>
